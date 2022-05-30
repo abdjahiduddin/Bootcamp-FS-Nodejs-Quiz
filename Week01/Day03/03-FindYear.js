@@ -12,6 +12,13 @@ console.log(matchingDate); */
 
 function matchingDate(dates, year) {
   const matchDate = dates.find((date) => date.getFullYear() === year);
+  // let matchDate = "";
+  // for (let i = 0; i < dates.length; i++) {
+  //   if (dates[i].getFullYear() === year) {
+  //     matchDate = dates[i];
+  //     break;
+  //   }
+  // }
   return matchDate.toString();
 }
 
