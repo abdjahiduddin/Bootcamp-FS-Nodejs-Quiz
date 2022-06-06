@@ -14,7 +14,7 @@ const soalLima = (penduduk, max) => {
     // console.log("Jumlah Penduduk: " + jmlPenduduk);
   }
   console.log(
-    `Jumlah tahun yang dibutuhkan untuk mencapai penduduk ${max} adalah ${countYear}`
+    `Total tahun yang dibutuhkan untuk mencapai jumlah penduduk ${max} adalah ${countYear} tahun`
   );
 };
 soalLima(30000,100000);

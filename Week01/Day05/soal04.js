@@ -38,7 +38,7 @@ const soalEmpatB = (n) => {
   }
 };
 
-soalEmpatB(5)
+soalEmpatB(5);
 
 // 1
 // 2 3
@@ -70,7 +70,7 @@ const soalEmpatC = (n) => {
   }
 };
 
-soalEmpatC(5)
+soalEmpatC(5);
 
 // soalEmpatC(5)
 // 1 10 11 20 21
@@ -91,8 +91,8 @@ const soalEmpatD = (n) => {
         strNum += i + " ";
         tmpA = i;
       } else if (y === 2) {
-        strNum += 11 - i + " ";
-        tmpB = 11 - i;
+        strNum += (multiply + 1) - i + " ";
+        tmpB = (multiply + 1 )- i;
       } else if (y % 2 === 1) {
         strNum += tmpA + multiply + " ";
         tmpA += multiply;
