@@ -15,4 +15,4 @@ const  findSum =(arr, weight) =>{
     return `${foundItem[0]} & ${foundItem[1]}`
 }
 
-console.log(findSum([1,4,2,5,3],9)); // 4 & 5
+console.log(findSum([1,2,3,4,5],5)); // 4 & 5

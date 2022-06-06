@@ -13,10 +13,11 @@ function countingValleys(s) {
       countValleys--;
     }
   });
-  //   console.log(countValleys);
+  // console.log(countValleys);
   if (strArr[strArr.length - 1] === "U" && countValleys === 0) {
     countValleys++;
   }
   return countValleys;
 }
+console.log(countingValleys("UDDUUDUD")); //0
 console.log(countingValleys("UDDDUDUU")); //1

@@ -13,7 +13,7 @@
 
 function tagihanKomik(tglPinjam, tglKembali, totalkomik) {
   const denda = 500;
-  const biaya = 2500;
+  const biaya = 2000;
   const pinjam = new Date(tglPinjam);
   const kembali = new Date(tglKembali);
 
@@ -60,7 +60,7 @@ console.log(tagihanKomik("09-03-20xx", "09-mm-2021", 4)); //Tgl.Pinjam 09-03-20x
 console.log(tagihanKomik("09-03-2021", "09-6-2021", 4));
 /**
  Total Hari = 3 
- Total Komik = 4 x 2500 
+ Total Komik = 4 x 2000 
  ------------------------
  Total Tagihan =Rp.30000
  */

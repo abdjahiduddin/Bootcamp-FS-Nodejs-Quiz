@@ -10,15 +10,15 @@
     Pembayaran dapat dilakukan paling cepat 5 hari sebelum jatuh tempo.
  */
 function payment(tglBayar, tglJatuhTempo, cicilan) {
-  const monthArr = Array.from(Array(12).keys(), (value) => value + 1);
+  // const monthArr = Array.from(Array(12).keys(), (value) => value + 1);
   if (cicilan < 3500000) {
     return "Angsuran anda kurang dari Rp 3.500.000,00. Silahkan isi sesuai angsuran";
   }
 
   const diffDays = differenceInDays(tglBayar, tglJatuhTempo);
-  const monthIndex = new Date(tglJatuhTempo).getMonth();
+  const month = new Date(tglJatuhTempo).getMonth();
   if (diffDays > 5) {
-    return `Tagihan bulan ${monthArr[monthIndex]} belum tersedia`;
+    return `Tagihan bulan ${month + 1} belum tersedia`;
   }
 
   let terlambat = 0;
@@ -40,12 +40,12 @@ function payment(tglBayar, tglJatuhTempo, cicilan) {
 }
 
 function showTagihan(payDate, dueDate, angsuran, cicilan, terlambat, denda) {
-  const monthArr = Array.from(Array(12).keys(), (value) => value + 1);
+  // const monthArr = Array.from(Array(12).keys(), (value) => value + 1);
   payDate = new Date(payDate);
   dueDate = new Date(dueDate);
   const tglBayar = payDate.toLocaleDateString("id-ID");
   const tglJatuhTempo = dueDate.toLocaleDateString("id-ID");
-  const monthIndex = payDate.getMonth();
+  const month = payDate.getMonth();
   const tahunBayar = new Date().getFullYear();
 
   const total = cicilan + denda;
@@ -55,7 +55,7 @@ function showTagihan(payDate, dueDate, angsuran, cicilan, terlambat, denda) {
 Tanggal Bayar : ${tglBayar}
 Jatuh Tempo :  ${tglJatuhTempo}
 --------------------------
-Tagihan bulan ${monthArr[monthIndex]},${tahunBayar} = Rp. ${angsuran} 
+Tagihan bulan ${month + 1},${tahunBayar} = Rp. ${angsuran} 
 Denda = Rp. ${denda} (terlambat ${terlambat} hari)
 Total = Rp. ${total} (lunas)
 --------------------------
@@ -67,7 +67,7 @@ function differenceInDays(startDate, endDate) {
   startDate = new Date(startDate);
   endDate = new Date(endDate);
   const diffMilisec = endDate.getTime() - startDate.getTime();
-  const diffDays = diffMilisec / 86400000;
+  const diffDays = diffMilisec / 86400000; 
   return diffDays;
 }
 
