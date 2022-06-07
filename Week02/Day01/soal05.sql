@@ -2,7 +2,7 @@
 SELECT department_id  FROM departments 
 WHERE department_name = 'IT'
 
--- Menampilkan ID dari employee yang ada di department IT 
+-- Setelah mendapatkan ID dari department IT selanjutnya menampilkan ID dari employee yang ada di department IT 
 SELECT employee_id FROM employees
 WHERE department_id = 6
 
