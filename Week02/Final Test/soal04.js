@@ -1,6 +1,6 @@
 // SOAL 4
-// Array 01
-const arraySatu = () => {
+// Bentuk 01
+const bentukSatu = () => {
   for (let i = 1; i <= 7; i++) {
     let strTmp = "";
     for (let y = i; y < i * 2; y++) {
@@ -9,10 +9,10 @@ const arraySatu = () => {
     console.log(strTmp);
   }
 };
-arraySatu();
+bentukSatu();
 
-// Array 02
-const arrayDua = () => {
+// Bentuk 02
+const bentukDua = () => {
   for (let i = 0; i < 7; i++) {
     let strTmp = "";
     for (let y = i + 5; y <= i * 2 + 5; y++) {
@@ -21,4 +21,4 @@ const arrayDua = () => {
     console.log(strTmp);
   }
 };
-arrayDua();
+bentukDua();

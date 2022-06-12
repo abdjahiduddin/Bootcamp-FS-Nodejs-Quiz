@@ -7,7 +7,7 @@ const rotateArray = (arr, x) => {
         arr.unshift(lastItem)
         console.log(tmpArr +" => "+arr)
     }
-    return "Result: " + arr
+    return `Result: ${arr}`
 }
 
 const arr = [3,8,9,7,6] 
